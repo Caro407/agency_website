@@ -49,12 +49,16 @@ header {
   @apply my-6;
 }
 
+a {
+  @apply text-red-300 hover:text-red-400 px-2 py-1 mx-3;
+}
+
 .container {
   @apply my-6 mx-4;
 }
 
 .btn {
-  @apply inline mx-2 bg-red-100 hover:bg-red-200 text-white font-bold py-2 px-4 rounded;
+  @apply inline mx-2 bg-red-100 hover:bg-red-200 text-white font-bold py-1 px-2 rounded;
 }
 
 .work-items {
@@ -62,7 +66,7 @@ header {
 }
 
 .work-element {
-  @apply text-center mx-4;
+  @apply text-center mx-4 my-4;
 }
 
 .dark-theme {
@@ -79,4 +83,8 @@ header {
     .btn {
       @apply text-gray-600
     }
+}
+
+.gradient {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }
