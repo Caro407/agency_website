@@ -9,9 +9,74 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  @apply inline mx-2 font-bold text-xl text-red-400;
+}
+
+h2 {
+  @apply text-lg text-red-300 font-bold;
+}
+
+h3 {
+  @apply text-lg text-red-200 font-bold;
+}
+
+p {
+  @apply text-sm italic text-justify text-gray-600;
+}
+
+label {
+  @apply block text-gray-600 text-sm font-bold mb-2;
+}
+
+input, textarea {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
+}
+
+form .btn {
+  @apply mx-0 w-full;
+}
+
+header {
+  @apply my-6;
+}
+
+.container {
+  @apply my-6 mx-4;
+}
+
+.btn {
+  @apply inline mx-2 bg-red-100 hover:bg-red-200 text-white font-bold py-2 px-4 rounded;
+}
+
+.work-items {
+  @apply grid grid-cols-3 justify-items-stretch;
+}
+
+.work-element {
+  @apply text-center mx-4;
+}
+
+.dark-theme {
+  background-color: #1a1a1a;
+    p {
+      @apply text-gray-100;
+    }
+    svg {
+      fill: white
+    }
+    label {
+      @apply text-gray-100
+    }
+    .btn {
+      @apply text-gray-600
+    }
 }

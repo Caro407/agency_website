@@ -6,11 +6,45 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Works from './pages/Works';
+import ThemeContext from './ThemeContext';
 
 const App = () => {
+  const [currentTheme, setCurrentTheme] = React.useState(false);
+  let body = document.querySelector('body');
+
+  const switchTheme = () => {
+    body.classList.toggle('dark-theme');
+    if(currentTheme === false) {
+      setCurrentTheme(true)
+    } else {
+      setCurrentTheme(false)
+    }
+  };
 
   return (
-    <h1>Hello</h1>
+      <ThemeContext.Provider value={{
+          currentTheme,
+          switchTheme
+        }}>
+        <Router>
+          <Navbar />
+          <Switch>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/works">
+              <Works />
+            </Route>
+          </Switch>
+        </Router>
+      </ThemeContext.Provider>
   )
 }
 
