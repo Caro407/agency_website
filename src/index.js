@@ -19,11 +19,26 @@ const App = () => {
   const switchTheme = () => {
     body.classList.toggle('dark-theme');
     if(currentTheme === false) {
-      setCurrentTheme(true)
+      setCurrentTheme(true);
+      localStorage.setItem('theme', "true");
     } else {
-      setCurrentTheme(false)
-    }
+      setCurrentTheme(false);
+      localStorage.setItem('theme', "false");
+    };
+
   };
+
+  React.useEffect(() => {
+    const saveTheme = () => {
+      let savedTheme = localStorage.getItem('theme');
+      if(savedTheme === null || savedTheme === "false") {
+        localStorage.setItem('theme', `${currentTheme}`);
+      } else {
+        switchTheme();
+      };
+    }
+    saveTheme()
+  }, []);
 
   return (
       <ThemeContext.Provider value={{

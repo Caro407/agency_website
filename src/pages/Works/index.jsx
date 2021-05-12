@@ -9,6 +9,14 @@ const Works = () => {
   return (
     <div>
       <h1>Works</h1>
+      <ul>
+        {projects.map((project, index) =>
+          <li key={index}>
+            <Link to={`${url}/${project.url}`}>{project.customer} project</Link>
+          </li>
+        )}
+      </ul>
+
       <Switch>
         <Route exact path={path}>
           <h3>Please select a project.</h3>
@@ -17,14 +25,6 @@ const Works = () => {
           <Project />
         </Route>
       </Switch>
-      <ul>
-        {projects.map(project => 
-          <li>
-            <Link to={`${url}/${project.url}`}>{project.customer} project</Link>
-          </li>
-        )}
-      </ul>
-
     </div>
   )
 }
