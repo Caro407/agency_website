@@ -23,11 +23,11 @@ code {
 }
 
 h1 {
-  @apply inline mx-2 font-bold text-xl text-red-400;
+  @apply inline mx-2 font-bold text-3xl text-red-400;
 }
 
 h2 {
-  @apply text-lg text-red-300 font-bold;
+  @apply text-2xl text-red-300 font-bold my-2;
 }
 
 h3 {
@@ -35,19 +35,11 @@ h3 {
 }
 
 p {
-  @apply text-sm italic text-justify text-gray-600;
+  @apply text-sm text-justify text-gray-600;
 }
 
-label {
-  @apply block text-gray-600 text-sm font-bold mb-2;
-}
-
-input, textarea {
-  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
-}
-
-form .btn {
-  @apply mx-0 w-full;
+li {
+  @apply text-red-400;
 }
 
 header {
@@ -63,11 +55,19 @@ svg {
 }
 
 .container {
-  @apply my-6 mx-4;
+  @apply my-6 px-4;
 }
 
 .btn {
-  @apply inline mx-2 bg-red-100 hover:bg-red-200 text-white font-bold py-1 px-2 rounded;
+  @apply inline mx-2 gradient opacity-25 text-white font-bold rounded focus:outline-none transform transition hover:scale-105 duration-300 ease-in-out shadow-lg;
+}
+
+.btn-sm {
+  @apply py-1 px-2;
+}
+
+.btn-lg {
+  @apply py-3 px-5;
 }
 
 .work-items {
@@ -78,25 +78,54 @@ svg {
   @apply text-center mx-4 my-4;
 }
 
+.card {
+  @apply flex flex-col w-1/2 mx-auto rounded-lg mt-4 shadow-lg z-10;
+}
+
 .dark-theme {
   background-color: #1a1a1a;
+    h1 {
+      color: #d65a61;
+    }
+    h2 {
+      color: #d76d5d;
+    }
     p {
       @apply text-gray-100;
+    }
+    a {
+      color: #d76d5d;
+        &:hover {
+          color: #d65a61;
+        }
+    }
+    li {
+      color: #d65a61;
+    }
+    svg {
+      fill: #d65a61;
     }
     label {
       @apply text-gray-100
     }
     .btn {
-      @apply text-gray-600
+      @apply text-gray-600;
+      opacity: 1;
+    }
+    .top-dividor, .bottom-dividor {
+      opacity: 1;
+    }
+    .card {
+      background-color: lighten(#1a1a1a, 8);
     }
 }
 
 .top-dividor {
-  @apply h-1 mx-auto gradient w-80 opacity-25 mt-6 py-0 rounded-t;
+  @apply h-1 gradient opacity-25 my-0 py-0 rounded-t;
 }
 
 .bottom-dividor {
-  @apply h-1 mx-auto gradient w-80 opacity-25 mb-6 py-0 rounded-b;
+  @apply h-1 gradient opacity-25 my-0 py-0 rounded-b;
 }
 
 .gradient {
@@ -106,4 +135,12 @@ svg {
 .theme-icon {
   @apply px-2;
   font-size: 16px;
+}
+
+.list-element {
+  @apply border-b py-4;
+}
+
+.sublist-element {
+  @apply block font-normal mx-3 text-center;
 }

@@ -3,7 +3,6 @@ import {
   Link,
 } from 'react-router-dom';
 import ThemeContext from './../../ThemeContext';
-//import logo from './../../images/logo.svg';
 import {ReactComponent as ReactLogo} from './../../images/logo.svg';
 
 const Navbar = () => {
@@ -22,10 +21,10 @@ const Navbar = () => {
           <Link to="/works">Projets</Link>
         </div>
         <div className="col-span-1 mt-2">
-          <button className="btn flex justify-center items-center" onClick={theme.switchTheme}>
-            <i class="fas fa-sun theme-icon"></i>
+          <button className="btn btn-sm focus:shadow-outline flex justify-center items-center" onClick={theme.switchTheme}>
+            <i className="fas fa-sun theme-icon"></i>
              /
-            <i class="fas fa-moon theme-icon"></i>
+            <i className="fas fa-moon theme-icon"></i>
           </button>
         </div>
       </div>

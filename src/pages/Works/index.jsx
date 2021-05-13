@@ -8,9 +8,9 @@ const Works = () => {
 
   return (
     <div className="page-element">
-      <div className="top-dividor"></div>
+      <div className="top-dividor mx-auto w-80 mt-6"></div>
         <h2 className="text-center">Works</h2>
-      <div className="bottom-dividor"></div>
+      <div className="bottom-dividor mx-auto w-80 mb-6"></div>
       <ul className="work-items">
         {projects.map((project, index) =>
           <li key={index} className="work-element">
