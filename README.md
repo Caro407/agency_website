@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# The Agency's Website
 
 This project was created using TailwindCSS.
 You can switch your Theme Mode from light to dark and it will automatically be saved for your next visit ! 
