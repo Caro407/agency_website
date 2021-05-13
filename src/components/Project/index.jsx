@@ -20,16 +20,16 @@ const Project = () => {
 
         <div className="card">
           <div className="flex-1 rounded-t rounded-b-none overflow-hidden shadow">
-            <h2 className="w-full p-5 text-center">{displayedProject.customer}</h2>
+            <h2 className="w-full p-5 text-center">Le projet de {displayedProject.customer}</h2>
             <div className="top-dividor w-full"></div>
             <ul className="w-full text-center text-base font-bold">
               <li className="list-element">
                 Equipe en charge du projet :
-                <p className="sublist-element">Bouh</p>
+                <p className="sublist-element">Maurice et Gertude de la compta</p>
               </li>
               <li className="list-element">
                 Durée du projet
-                <p className="sublist-element">Bouh</p>
+                <p className="sublist-element">6 mois</p>
               </li>
               <li className="list-element">
                 Description
@@ -37,7 +37,7 @@ const Project = () => {
               </li>
               <li className="list-element">
                 Retour client
-                <p className="sublist-element">Bouh</p>
+                <p className="sublist-element">C'était trop super !</p>
               </li>
             </ul>
           </div>

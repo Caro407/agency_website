@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Works from './pages/Works';
+import Footer from './components/Footer';
 import ThemeContext from './ThemeContext';
 
 const App = () => {
@@ -58,6 +59,7 @@ const App = () => {
               <Works />
             </Route>
           </Switch>
+          <Footer />
         </Router>
       </ThemeContext.Provider>
   )

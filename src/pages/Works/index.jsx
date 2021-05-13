@@ -9,15 +9,21 @@ const Works = () => {
   return (
     <div className="page-element">
       <div className="top-dividor mx-auto w-80 mt-6"></div>
-        <h2 className="text-center">Works</h2>
+        <h2 className="text-center">Nos projets</h2>
       <div className="bottom-dividor mx-auto w-80 mb-6"></div>
-      <ul className="work-items">
-        {projects.map((project, index) =>
-          <li key={index} className="work-element">
-            <Link to={`${url}/${project.url}`}>{project.customer} project</Link>
-          </li>
-        )}
-      </ul>
+        <section className="container mx-auto">
+          <h2 className="w-full my-2 text-3xl leading-tight text-center">
+            Nous avons travaillé avec...
+          </h2>
+
+          <ul className="work-items">
+            {projects.map((project, index) =>
+              <li key={index} className="work-element">
+                <Link to={`${url}/${project.url}`}>{project.customer}</Link>
+              </li>
+            )}
+          </ul>
+        </section>
 
       <Switch>
         <Route path={`${path}/:projectId`}>
