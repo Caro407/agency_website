@@ -47,7 +47,7 @@ header {
 }
 
 a {
-  @apply text-red-300 hover:text-red-400 px-2 py-1 mx-3;
+  @apply text-red-300 hover:text-red-400 hover:underline px-2 py-1 mx-3;
 }
 
 svg {
@@ -75,11 +75,11 @@ svg {
 }
 
 .work-element {
-  @apply text-center mx-4 my-4;
+  @apply text-center mx-4 my-2;
 }
 
 .card {
-  @apply flex flex-col w-1/2 mx-auto rounded-lg mt-4 shadow-lg z-10;
+  @apply flex flex-col w-2/3 mx-auto rounded-lg mt-4 shadow-lg z-10;
 }
 
 .dark-theme {
@@ -112,7 +112,7 @@ svg {
       @apply text-gray-100
     }
     .btn {
-      @apply text-gray-600;
+      @apply text-gray-100;
       opacity: 1;
     }
     .top-dividor, .bottom-dividor {

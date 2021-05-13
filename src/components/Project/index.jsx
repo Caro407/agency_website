@@ -4,12 +4,12 @@ import projects from './../../data/projects';
 
 const Project = () => {
   let { projectId } = useParams();
-  let [displayedProject, setDisplayedProject] = React.useState({customer: '', description: ''});
+  let [displayedProject, setDisplayedProject] = React.useState({customer: '', description: '', title: ''});
 
   React.useEffect(() => {
     projects.forEach((project) => {
       if(project.url === projectId) {
-        setDisplayedProject({customer: project.customer, description: project.description})
+        setDisplayedProject({customer: project.customer, description: project.description, title: project.titre})
       }
     }
     );
@@ -20,7 +20,7 @@ const Project = () => {
 
         <div className="card">
           <div className="flex-1 rounded-t rounded-b-none overflow-hidden shadow">
-            <h2 className="w-full p-5 text-center">Le projet de {displayedProject.customer}</h2>
+            <h2 className="w-full p-5 text-center">{displayedProject.title}</h2>
             <div className="top-dividor w-full"></div>
             <ul className="w-full text-center text-base font-bold">
               <li className="list-element">
